@@ -1,0 +1,49 @@
+﻿@using StudentDetails.Models
+@model StudentDetails.Models.StudentModel
+
+@{
+    ViewBag.Title = "StudentRecord";
+}
+
+<h2>StudentRecord</h2>
+
+<div>
+
+    @using (Html.BeginForm())
+
+    {
+        @Html.LabelFor(x => x.ID)
+        @Html.TextBoxFor(x => x.ID)
+        <input type="Submit" id="btnsearch" name="x" value="Search" />
+
+        <br />
+
+        @Html.LabelFor(y => y.LastName)
+        @Html.TextBoxFor(y => y.LastName)
+
+        <br />
+
+        @Html.LabelFor(z => z.FirstName)
+        @Html.TextBoxFor(z => z.FirstName)
+
+        <br />
+
+        @Html.LabelFor(a => a.Email)
+        @Html.TextBoxFor(a => a.Email)
+
+        <br />
+
+        @Html.LabelFor(b => b.Age)
+        @Html.TextBoxFor(b => b.Age)
+
+        <br />
+
+        <input type="Submit" id="btninsert" name="x" value="Insert" />
+        <input type="Submit" id="btnupdate" name="x" value="Update" />
+        <input type="Submit" id="btndelete" name="x" value="Delete" />
+
+
+    }
+
+</div>
+

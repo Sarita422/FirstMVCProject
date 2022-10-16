@@ -1,0 +1,66 @@
+﻿@using StudentDetails.Models
+@model List<StudentModel>
+    @{
+        ViewBag.Title = "GetStudentDetails";
+    }
+
+    <h2>GetStudentDetails</h2>
+
+    <body>
+
+        <div>
+            <table>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        LastName
+                    </th>
+                    <th>
+                        FirstName
+
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Age
+                    </th>
+
+                </tr>
+            </table>
+        </div>
+
+
+        @{
+            List<StudentModel> student = Model;
+            foreach (StudentDetails.Models.StudentModel p in student) 
+            {
+                <table>
+                    <tr>
+                        <td>
+                            @p.ID
+                        </td>
+                        <td>
+                            @p.LastName
+                        </td>
+                        <td>
+                            @p.FirstName
+                        </td>
+                        <td>
+                            @p.Email
+                        </td>
+                        <td>
+                            @p.Age
+                        </td>
+                        
+
+                    </tr>
+                </table>
+            }
+
+           @Html.ActionLink("Ins_Update_Delete_Search","Ins_Update_Delete_Search")
+        }
+
+    </body>
